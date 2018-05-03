@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -60,6 +61,12 @@ class ParseWeatherResponse extends AsyncTask<JSONObject, Void, Void> {
                     context,
                     Constants.PREF_RECENT_TIMESTAMP,
                     new SimpleDateFormat("hh:mm a", Locale.US).format(new Date())
+            );
+
+            Utils.saveSharedPreference(
+                    context,
+                    Constants.PREF_TOWN_NAME,
+                    response.getString("name")
             );
         } catch (Exception e) {
             e.printStackTrace();

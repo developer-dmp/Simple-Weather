@@ -60,7 +60,8 @@ public class UpdateWidgetService extends Service {
 
             // gather information to present to user
             String temp = "Temp: " + preferences.getString(Constants.PREF_RECENT_TEMP, "N/A") + " F";
-            String zip = "Zip: " + preferences.getString(Constants.PREF_RECENT_ZIP, "~~~~~").substring(0, Constants.ZIPCODE_LENGTH);
+            String zip = "Zip: " + preferences.getString(Constants.PREF_RECENT_ZIP, "~~~~~").substring(0, Constants.ZIPCODE_LENGTH)
+                    + " - " + preferences.getString(Constants.PREF_TOWN_NAME, "Town");
             String description = "Description: " + preferences.getString(Constants.PREF_RECENT_DESCRIPTION, "N/A");
             String timestamp = "Last Refreshed: " + preferences.getString(Constants.PREF_RECENT_TIMESTAMP, "Never");
 

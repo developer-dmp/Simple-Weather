@@ -13,6 +13,7 @@ class Constants {
     static final String PREF_RECENT_ZIP = "recent_zip";
     static final String PREF_RECENT_DESCRIPTION = "recent_description";
     static final String PREF_RECENT_TIMESTAMP = "recent_timestamp";
+    static final String PREF_TOWN_NAME = "town_name";
 
     static final String BASE_API_URL = "http://api.openweathermap.org/data/2.5/weather";
     static final String API_APPID_KEY = "APPID";
