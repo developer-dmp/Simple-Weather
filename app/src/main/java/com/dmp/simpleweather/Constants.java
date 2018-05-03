@@ -6,6 +6,8 @@ package com.dmp.simpleweather;
 
 class Constants {
 
+    static final String ADMOB_APP_ID = "ca-app-pub-4157181634370152/3199284388";
+
     static final String PREF_FILE_NAME = "com.dmp.simpleweather.preferences";
     static final String PREF_RECENT_TEMP = "recent_temp";
     static final String PREF_RECENT_ZIP = "recent_zip";

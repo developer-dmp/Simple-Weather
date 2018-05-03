@@ -17,6 +17,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import org.json.JSONObject;
 
@@ -39,12 +42,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MobileAds.initialize(this, Constants.ADMOB_APP_ID);
+
         // configure global dialog
         mDialog = new ProgressDialog(this);
         mDialog.setCancelable(false);
         mDialog.setMessage("Fetching weather ...");
 
         configure();
+
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     /**
@@ -130,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         Log.i("JSON",response.toString());
                         new ParseWeatherResponse(MainActivity.this).execute(response);
-                        ((TextView)findViewById(R.id.weather_info_textView)).setText(response.toString());
+                        ((TextView)findViewById(R.id.weather_info_textView)).setText(R.string.weather_success_message);
                     }
                 },
                 new Response.ErrorListener() {

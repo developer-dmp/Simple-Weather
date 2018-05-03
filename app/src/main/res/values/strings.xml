@@ -4,4 +4,6 @@
     <string name="button_go">Go</string>
     <string name="update">Update</string>
     <string name="refresh">Refresh</string>
+    <string name="main_activity_title_info">Please enter a US zipcode to load weather information!</string>
+    <string name="weather_success_message">Your weather information has been saved!\n\nPlease don\'t forget to add the widget to your home screen to quickly view up-to-date information.</string>
 </resources>
