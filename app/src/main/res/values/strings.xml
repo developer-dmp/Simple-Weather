@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Simple Weather</string>
+    <string name="zip">Zipcode</string>
+    <string name="button_go">Go</string>
+    <string name="update">Update</string>
+    <string name="refresh">Refresh</string>
+</resources>

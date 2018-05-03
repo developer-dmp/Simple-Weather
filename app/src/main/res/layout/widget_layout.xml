@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin"
+    android:background="@drawable/widget_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/button_layout"
+        android:layout_toStartOf="@+id/button_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/zipcode_widget_textView"
+            android:gravity="center"
+            android:textAppearance="@style/WidgetTextStyle"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/temp_widget_textView"
+            android:gravity="center"
+            android:textAppearance="@style/WidgetTextStyle"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/description_widget_textView"
+            android:gravity="center"
+            android:textAppearance="@style/WidgetTextStyle"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/last_updated_widget_textView"
+            android:gravity="center"
+            android:textAppearance="@style/WidgetTextStyle"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:id="@+id/button_layout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/widget_update_button"
+            android:text="@string/update"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_corners_update"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/widget_margin"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/widget_refresh_button"
+            android:text="@string/refresh"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_corners_refresh"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>
