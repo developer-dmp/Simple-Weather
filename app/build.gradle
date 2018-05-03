@@ -19,14 +19,7 @@ android {
 //            storePassword keystoreProperties['storePassword']
 //        }
 //    }
-    signingConfigs {
-        config {
-            keyAlias 'MyKey_SimpleWeather'
-            keyPassword 'SimpleWeather2018'
-            storeFile file('C:/Users/Domenic Polidoro/keystore/android.jks')
-            storePassword 'Domenic16'
-        }
-    }
+    
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.dmp.simpleweather"
